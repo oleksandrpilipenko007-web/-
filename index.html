@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>Переход...</title>
+<style>
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;margin:0;background:#f6f8fb;color:#111;display:flex;align-items:center;justify-content:center;height:100vh}
+.card{max-width:520px;padding:22px;border-radius:12px;background:#fff;box-shadow:0 8px 30px rgba(12,20,30,0.06);text-align:center}
+a.button{display:inline-block;margin-top:14px;padding:10px 16px;border-radius:8px;text-decoration:none;background:#0b61ff;color:#fff}
+p.small{color:#666;font-size:0.9rem;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Подготовка перехода</h1>
+<p>Нажмите "Перейти" или дождитесь автоматического перенаправления.</p>
+<a id="go" class="button" href="https://tone.affomelody.com/hXEhs0" target="_blank" rel="noopener noreferrer">Перейти</a>
+<p class="small">Если ничего не произошло — обновите страницу или нажмите кнопку.</p>
+</div>
+
+<script>
+(function(){
+  var TARGET = "https://tone.affomelody.com/hXEhs0";
+  var AUTO_DELAY_MS = 600;
+  function openNoRef(url){
+    try{
+      var a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      return true;
+    }catch(e){
+      return false;
+    }
+  }
+  setTimeout(function(){
+    var ok = openNoRef(TARGET);
+    if(!ok){
+      window.location.href = TARGET;
+    }
+  }, AUTO_DELAY_MS);
+})();
+</script>
+</body>
+</html>
